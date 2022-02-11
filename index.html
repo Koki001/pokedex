@@ -7,6 +7,38 @@
     <title>Pokedex</title>
 </head>
 <body>
-    <h1>my pokedex</h1>
+<h1>PokeDex</h1>
+<div id="poke_container" class="poke-container"></div>
+
+<form action="">
+
+    <fieldset class="options">
+        <legend>how many pokemon can you handle?</legend>
+
+        <label for="first">5</label>
+        <input type="radio" name="poke" id="first" value="5"  >
+
+        <label for="second">10</label>
+        <input type="radio" name="poke" id="second" value="10" >
+
+        <label for="third">15</label>
+        <input type="radio" name="poke" id="third" value="15" >
+    </fieldset>
+
+    <div class="submitContainer">
+        <input type="submit" value="Get me Pokemon!">
+    </div>
+
+</form>
+
+
+<ul id = "pokeUl" class = "ulContainer">
+
+</ul>
+
+
+
+
+        <script src="./script.js"></script>
 </body>
 </html>
