@@ -1,3 +1,15 @@
+
+body {
+	background: #bbdcef;
+	background: -webkit-linear-gradient(to right, #D4D3DD, #bbdcef);
+	background: linear-gradient(to right, #D4D3DD, #bbdcef);
+
+	
+}
+
+
+
+
 .ulContainer{
     display:flex;
     justify-content: center;
@@ -24,11 +36,25 @@
             margin:0;
             padding:0;
         }
-        border: 3px solid red;
+        border: 3px ;
         margin: 0px 10px 20px 10px;
         width: 250px;
+        background-color: #eee;
+	    border-radius: 20px;
+	    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	    margin: 10px;
+	    padding: 20px;
+	    text-align: center;
         
     }
 
 }
 
+.pokemon {
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+}
