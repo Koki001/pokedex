@@ -24,13 +24,13 @@ pokedex.fetchPokemon = function () {
             }
             pokedex.displayPokemon = function () {
                 const greetTitle = document.querySelector('.greetingTitle')
-                const pId =
-                const pHeight =
-                const pWeight =
-                const pType = 
-                const pHp =
-                const pAttack =
-                const pDefense =
+                // const pId =
+                // const pHeight =
+                // const pWeight =
+                // const pType = 
+                // const pHp =
+                // const pAttack =
+                // const pDefense =
             
                 const div = document.querySelector('.singlePokemonContainer')
                 const image = document.createElement('img')
