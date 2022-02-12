@@ -23,6 +23,15 @@ pokedex.fetchPokemon = function () {
                 id: newResult.id,
             }
             pokedex.displayPokemon = function () {
+                const greetTitle = document.querySelector('.greetingTitle')
+                const pId =
+                const pHeight =
+                const pWeight =
+                const pType = 
+                const pHp =
+                const pAttack =
+                const pDefense =
+            
                 const div = document.querySelector('.singlePokemonContainer')
                 const image = document.createElement('img')
 
@@ -31,7 +40,7 @@ pokedex.fetchPokemon = function () {
                 } else {
                     image.src = pokemon.image
                 }
-
+                greetTitle.innerHTML = `Hey! My name is ${pokemon.name}`
                 div.appendChild(image)
             }
 
