@@ -1,0 +1,120 @@
+h1 {
+    text-align: center;
+}
+
+.randomPokemonUl{
+
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 400px;
+    margin-bottom: 50px;
+
+    li{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        border: 3px ;
+        margin: 0px 10px 20px 10px;
+        width: 250px;
+        background-color: #eee;
+        border-radius: 20px;
+        box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        p{
+            margin: 10px 0px 0 0;
+            padding:0px;
+        }
+        h3,h5{
+            margin:0;
+            padding:0;
+        }
+    }
+}
+
+.singlePokemonContainer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px ;
+    margin: 0px 10px 20px 10px;
+    width: 250px;
+    background-color: #eee;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+        width: 410px;
+        height: 410px;
+    
+
+    img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.meetContainer {
+    display: flex;
+    justify-content: space-evenly;
+
+    .meetTextContainer {
+        border: 3px ;
+        margin: 0px 10px 20px 10px;
+        background-color: #eee;
+        border-radius: 20px;
+        box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+.meetWrapper h2 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.aboutContainer {
+    display: flex;
+
+    .aboutImgContainer {
+      
+        width: 60%;
+        img {
+            width: 40%;
+        }
+        .ash {
+            margin-left: 60px;
+        }
+    }
+
+    .aboutTextContainer {
+        width: 40%;
+        border: 3px ;
+        margin: 0px 10px 20px 10px;
+        background-color: #eee;
+        border-radius: 20px;
+        box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+        margin: 10px;
+        padding: 20px;
+       
+    }
+}
+
+
+// .pokemon {
+// 	background-color: #eee;
+// 	border-radius: 20px;
+// 	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+// 	margin: 10px;
+// 	padding: 20px;
+// 	text-align: center;
+// }

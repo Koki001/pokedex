@@ -1,0 +1,28 @@
+
+body {
+	background: #bbdcef;
+	background: -webkit-linear-gradient(to right, #D4D3DD, #bbdcef);
+	background: linear-gradient(to right, #D4D3DD, #bbdcef);
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    height: 40px;
+    width: 80px;
+}

@@ -4,7 +4,33 @@ body {
   background: linear-gradient(to right, #D4D3DD, #bbdcef);
 }
 
-.ulContainer {
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  height: 40px;
+  width: 80px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.randomPokemonUl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,10 +39,10 @@ body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  list-style: none;
+  height: 400px;
+  margin-bottom: 50px;
 }
-
-.ulContainer li {
+.randomPokemonUl li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,23 +64,33 @@ body {
   padding: 20px;
   text-align: center;
 }
-
-.ulContainer li img {
+.randomPokemonUl li img {
   width: 200px;
   height: 200px;
 }
-
-.ulContainer li p {
+.randomPokemonUl li p {
   margin: 10px 0px 0 0;
   padding: 0px;
 }
-
-.ulContainer li h3, .ulContainer li h5 {
+.randomPokemonUl li h3, .randomPokemonUl li h5 {
   margin: 0;
   padding: 0;
 }
 
-.pokemon {
+.singlePokemonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px;
+  margin: 0px 10px 20px 10px;
+  width: 250px;
   background-color: #eee;
   border-radius: 20px;
   -webkit-box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
@@ -62,4 +98,60 @@ body {
   margin: 10px;
   padding: 20px;
   text-align: center;
+  width: 410px;
+  height: 410px;
+}
+.singlePokemonContainer img {
+  width: 400px;
+  height: 400px;
+}
+
+.meetContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.meetContainer .meetTextContainer {
+  border: 3px;
+  margin: 0px 10px 20px 10px;
+  background-color: #eee;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+          box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  margin: 10px;
+  padding: 20px;
+}
+
+.meetWrapper h2 {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.aboutContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.aboutContainer .aboutImgContainer {
+  width: 60%;
+}
+.aboutContainer .aboutImgContainer img {
+  width: 40%;
+}
+.aboutContainer .aboutImgContainer .ash {
+  margin-left: 60px;
+}
+.aboutContainer .aboutTextContainer {
+  width: 40%;
+  border: 3px;
+  margin: 0px 10px 20px 10px;
+  background-color: #eee;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+          box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  margin: 10px;
+  padding: 20px;
 }

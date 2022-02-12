@@ -8,36 +8,74 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+
 <h1>PokeDex</h1>
-<div id="poke_container" class="poke-container"></div>
 
-<form action="">
-
-    <fieldset class="options">
-        <legend>how many pokemon can you handle?</legend>
-
-        <label for="first">5</label>
-        <input type="radio" name="poke" id="first" value="5"  >
-
-        <label for="second">10</label>
-        <input type="radio" name="poke" id="second" value="10" >
-
-        <label for="third">15</label>
-        <input type="radio" name="poke" id="third" value="15" >
-    </fieldset>
-
-    <div class="submitContainer">
-        <input type="submit" value="Get me Pokemon!">
+<div class="wrapper aboutContainer">
+    <div class="aboutImgContainer">
+        <img class="ash" src="./assets/ashPokemon.png" alt="">
+        <img class="pikachu" src="./assets/pikachu.png" alt="">
     </div>
+    <div class="aboutTextContainer">
+        <h2>What are Pokemon</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam quisquam similique, id quae explicabo enim sequi, laborum repellat maxime tempore facere qui dignissimos corrupti voluptate, et deleniti voluptatum ducimus consectetur reprehenderit praesentium corporis rem ipsa. Asperiores animi beatae porro earum?</p>
+    </div>
+</div>
+<div class="wrapper meetWrapper">
+    <h2>Meet a pokemon</h2>
+    <div class="meetContainer">
+        <div class="meetImgContainer">
+            <div class="singlePokemonContainer">
 
-</form>
+            </div>
+            <button type="submit" class="singlePokemonButton"></button>
+        </div>
+        <div class="meetTextContainer">
+            <h2>Hey! My name is POKEMON</h2>
+            <p>ID:</p>
+            <p>Height:</p>
+            <p>Weight:</p>
+            <p>Type:</p>
+            <p>HP:</p>
+            <p>Attack:</p>
+            <p>Defense:</p>
+        </div>
+    </div>
+</div>
 
 
-<ul id = "pokeUl" class = "ulContainer">
 
-</ul>
+<div class="wrapper">
+    <form action="">
+        <fieldset class="options">
+            <legend>how many pokemon can you handle?</legend>
+    
+            <label for="first">5</label>
+            <input type="radio" name="poke" id="first" value="5"  >
+    
+            <label for="second">10</label>
+            <input type="radio" name="poke" id="second" value="10" >
+    
+            <label for="third">15</label>
+            <input type="radio" name="poke" id="third" value="15" >
+        </fieldset>
+        <div class="submitContainer">
+            <input type="submit" value="Get me Pokemon!">
+        </div>
+    </form>
+</div>
 
+<div class="wrapper">
+    <ul id = "pokeUl" class = "ulContainer randomPokemonUl">
+    
+    </ul>
+</div>
 
+<!-- <div class="wrapper">
+    <footer>
+        <h2>Created at Juno</h2>
+    </footer>
+</div> -->
 
 
         <script src="./script.js"></script>
