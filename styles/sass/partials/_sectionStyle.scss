@@ -17,7 +17,7 @@ h1 {
         border: 3px ;
         margin: 0px 10px 20px 10px;
         width: 250px;
-        background-color: #eee;
+        background-color: $cardColor;
         border-radius: 20px;
         box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
         margin: 10px;
@@ -46,14 +46,14 @@ h1 {
     border: 3px ;
     margin: 0px 10px 20px 10px;
     width: 250px;
-    background-color: #eee;
+    background-color: $cardColor;
     border-radius: 20px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
     margin: 10px;
     padding: 20px;
     text-align: center;
-        width: 410px;
-        height: 410px;
+        width: 415px;
+        height: 415px;
     
 
     img {
@@ -65,16 +65,27 @@ h1 {
 .meetContainer {
     display: flex;
     justify-content: space-evenly;
+
+    .meetImgContainer{
+        display:flex;
+        flex-direction: column;
+         align-items: center ;
+    }
     
     .meetTextContainer {
         border: 3px ;
         margin: 0px 10px 20px 10px;
-        background-color: #eee;
+        background-color: $cardColor;
         border-radius: 20px;
         box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
         margin: 10px;
         padding: 20px;
+        
+        h2{
+            text-transform: capitalize;
+        }
     }
+
 }
 
 .meetWrapper h2 {
@@ -100,7 +111,7 @@ h1 {
         width: 40%;
         border: 3px ;
         margin: 0px 10px 20px 10px;
-        background-color: #eee;
+        background-color: $cardColor;
         border-radius: 20px;
         box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
         margin: 10px;
@@ -110,5 +121,13 @@ h1 {
 }
 
 fieldset {
-    border: 2px solid #eee;
+    border: none;
+
+}
+
+.pokeForm {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+
 }
