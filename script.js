@@ -161,7 +161,7 @@ pokedex.fetchPokemon = function () {
                     const image = document.createElement('img')
                     const pokeId = document.createElement('p')
                     const type = document.createElement('h5')
-                    
+
 
                     if (pokemon.image == null) {
                         image.src = pokemon.imageTwo
@@ -170,7 +170,7 @@ pokedex.fetchPokemon = function () {
                     }
 
                     title.innerHTML = pokemon.name
-                    pokeId.innerHTML = pokemon.id
+                    pokeId.innerHTML =`#${pokemon.id}`
                     type.innerHTML = pokemon.type
                     ul.appendChild(li)
                     li.appendChild(image)
