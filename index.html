@@ -33,10 +33,10 @@
         <div class="meetTextContainer">
             <h2 class="greetingTitle"></h2>
             <p class="pId">ID:</p>
-            <p class="pHeight">Height:</p>
-            <p class="pWeight">Weight:</p>
-            <p class="pType">Type:</p>
             <p class="pHp">HP:</p>
+            <p class="pH">Height:</p>
+            <p class="pW">Weight:</p>
+            <p class="pType">Type:</p>
             <p class="pAttack">Attack:</p>
             <p class="pDefense">Defense:</p>
         </div>
@@ -46,30 +46,35 @@
 
 
 <div class="wrapper">
-    <form action="">
+    <h2> Browse PokeDex</h2>
+    <h2>To explore more pokemon please select from one of the options below!</h2>
+    <div class = "browseContainer">
+        <h3> How many would you like to see?</h3>
+    <form action="" class = "pokeForm">
         <fieldset class="options">
 
-            <label for="first">5</label>
             <input type="radio" name="poke" id="first" value="5"  >
+            <label for="first">5</label>
     
-            <label for="second">10</label>
             <input type="radio" name="poke" id="second" value="10" >
+            <label for="second">10</label>
     
-            <label for="third">15</label>
             <input type="radio" name="poke" id="third" value="15" >
+            <label for="third">15</label>
 
         </fieldset>
         <div class="submitContainer">
             <input type="submit" value="Get me Pokemon!">
         </div>
     </form>
+    </div>
 </div>
-
-<div class="wrapper">
+<!-- 
+<div class="wrapper"> -->
     <ul id = "pokeUl" class = "ulContainer randomPokemonUl">
     
     </ul>
-</div>
+<!-- </div> -->
 
 <!-- <div class="wrapper">
     <footer>

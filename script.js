@@ -3,6 +3,11 @@ pokedex.init = function(){
    pokedex.fetchPokemon()
 }
 
+const pokeGreeting = ["Hey!","What's up!", "Hello!", "YO!", "Hi!", "Good Day!" ]
+const randomGreeting = pokeGreeting[Math.floor(Math.random() * pokeGreeting.length)]
+
+
+
 pokedex.fetchPokemon = function () {
     // for (let i = 1; i <= 10; i++) {
     const random = Math.floor(Math.random() * 800)
@@ -21,16 +26,25 @@ pokedex.fetchPokemon = function () {
                 imageTwo: newResult.sprites['front_default'],
                 type: newResult.types[0].type.name,
                 id: newResult.id,
+                height: newResult.height,
+                weight: newResult.weight,
+                hp: newResult.stats[0].base_stat,
+                defense: newResult.stats[2].base_stat,
+                attack: newResult.stats[1].base_stat,
+
             }
+            console.log(newResult.height)
             pokedex.displayPokemon = function () {
-                const greetTitle = document.querySelector('.greetingTitle')
-                const pId =
-                const pHeight =
-                const pWeight =
-                const pType = 
-                const pHp =
-                const pAttack =
-                const pDefense =
+                const greetTitle = document.querySelector('.greetingTitle');
+                const pId = document.querySelector('.pId');
+                const pHeight = document.querySelector('.pH');
+                const pWeight = document.querySelector('.pW');
+                const pType = document.querySelector('.pType');
+                const pHp = document.querySelector('.pHp');
+                const pAttack = document.querySelector('.pAttack');
+                const pDefense = document.querySelector('.pDefense');
+                
+
             
                 const div = document.querySelector('.singlePokemonContainer')
                 const image = document.createElement('img')
@@ -40,7 +54,14 @@ pokedex.fetchPokemon = function () {
                 } else {
                     image.src = pokemon.image
                 }
-                greetTitle.innerHTML = `Hey! My name is ${pokemon.name}`
+                pId.innerHTML = `ID: ${pokemon.id}`
+                pHeight.innerHTML = `Height: ${pokemon.height}`
+                pWeight.innerHTML = `Weight: ${pokemon.weight}`
+                pType.innerHTML = `Type: ${pokemon.type}`
+                pHp.innerHTML = `HP: ${pokemon.hp}`
+                pAttack.innerHTML = `Attack: ${pokemon.attack}`
+                pDefense.innerHTML = `Defense: ${pokemon.defense}`
+                greetTitle.innerHTML = `${randomGreeting} I'm ${pokemon.name}`
                 div.appendChild(image)
             }
 
@@ -88,6 +109,8 @@ refresh.preventDefault()
                     } else{
                         image.src = pokemon.image
                     }
+                    const meetTitle = document.querySelector('.greetingTitle')
+                    meetTitle.innerHTML =  `Hey my name is ${pokemon.name}`
 
                     div.appendChild(image)
                 }
@@ -138,6 +161,7 @@ pokedex.fetchPokemon = function () {
                     const image = document.createElement('img')
                     const pokeId = document.createElement('p')
                     const type = document.createElement('h5')
+                    
 
                     if (pokemon.image == null) {
                         image.src = pokemon.imageTwo
