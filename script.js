@@ -6,6 +6,8 @@ pokedex.init = function(){
 }
 
 
+
+
 // create a method to request info from the API
 
  pokedex.fetchPokemon = function () {
@@ -29,6 +31,8 @@ pokedex.init = function(){
 
 
                 }
+
+                
                
                 pokedex.displayPokemon = function() {
                     const ul = document.querySelector('ul')
@@ -55,9 +59,12 @@ pokedex.init = function(){
 
                 }
 
+                
+
                 pokedex.displayPokemon()
                 console.log(newResult)
             })
+
     }
 }
 
