@@ -43,6 +43,13 @@ pokedex.fetchPokemon = function () {
                 const pDefense = document.querySelector('.pDefense');
                 const div = document.querySelector('.singlePokemonContainer')
                 const image = document.createElement('img')
+                const weightIcon = `<i class="fa-solid fa-weight-hanging"></i>`
+                const heightIcon = '<i class="fa-solid fa-up-down"></i>'
+                const idIcon = '<i class="fa-solid fa-hashtag"></i>'
+                const hpIcon = '<i class="fa-solid fa-heart"></i>'
+                const attackIcon = '<i class="fa-solid fa-gavel"></i>'
+                const defenseIcon = '<i class="fa-solid fa-shield-blank"></i>'
+
 
                 if (pokemon.image == null) {
                     image.src = pokemon.imageThree
@@ -51,13 +58,13 @@ pokedex.fetchPokemon = function () {
                 } else {
                     image.src = pokemon.image
                 }
-                pId.innerHTML = `ID: ${pokemon.id}`
-                pHeight.innerHTML = `Height: ${pokemon.height / 10}m`
-                pWeight.innerHTML = `Weight: ${pokemon.weight / 10}kg`
+                pId.innerHTML = `ID: ${idIcon} ${pokemon.id}`
+                pHeight.innerHTML = `Height: ${heightIcon} ${pokemon.height / 10}m`
+                pWeight.innerHTML = `Weight: ${weightIcon} ${pokemon.weight / 10}kg`
                 pType.innerHTML = `Type: ${pokemon.type}`
-                pHp.innerHTML = `HP: ${pokemon.hp}`
-                pAttack.innerHTML = `Attack: ${pokemon.attack}`
-                pDefense.innerHTML = `Defense: ${pokemon.defense}`
+                pHp.innerHTML = `HP: ${hpIcon} ${pokemon.hp}`
+                pAttack.innerHTML = `Attack: ${attackIcon} ${pokemon.attack}`
+                pDefense.innerHTML = `Defense: ${defenseIcon} ${pokemon.defense}`
                 greetTitle.innerHTML = `${randomGreeting} I'm ${pokemon.name}.`
                 div.appendChild(image)
             }
@@ -116,6 +123,12 @@ refresh.preventDefault()
                     const pAttack = document.querySelector('.pAttack');
                     const pDefense = document.querySelector('.pDefense');
                     image.classList.add("fadeImg")
+                    const weightIcon = `<i class="fa-solid fa-weight-hanging"></i>`
+                    const heightIcon = '<i class="fa-solid fa-up-down"></i>'
+                    const idIcon = '<i class="fa-solid fa-hashtag"></i>'
+                    const hpIcon = '<i class="fa-solid fa-heart"></i>'
+                    const attackIcon = '<i class="fa-solid fa-gavel"></i>'
+                    const defenseIcon = '<i class="fa-solid fa-shield-blank"></i>'
 
                     if (pokemon.image == null) {
                         image.src = pokemon.imageThree
@@ -126,13 +139,13 @@ refresh.preventDefault()
                     }
                     
                     
-                    pId.innerHTML = `ID: ${pokemon.id}`
-                    pHeight.innerHTML = `Height: ${pokemon.height / 10}m`
-                    pWeight.innerHTML = `Weight: ${pokemon.weight / 10}kg`
+                    pId.innerHTML = `ID: ${idIcon} ${pokemon.id}`
+                    pHeight.innerHTML = `Height: ${heightIcon} ${pokemon.height / 10}m`
+                    pWeight.innerHTML = `Weight: ${weightIcon} ${pokemon.weight / 10}kg`
                     pType.innerHTML = `Type: ${pokemon.type}`
-                    pHp.innerHTML = `HP: ${pokemon.hp}`
-                    pAttack.innerHTML = `Attack: ${pokemon.attack}`
-                    pDefense.innerHTML = `Defense: ${pokemon.defense}`
+                    pHp.innerHTML = `HP: ${hpIcon} ${pokemon.hp}`
+                    pAttack.innerHTML = `Attack: ${attackIcon} ${pokemon.attack}`
+                    pDefense.innerHTML = `Defense: ${defenseIcon} ${pokemon.defense}`
                     greetTitle.innerHTML = `${randomGreeting} I'm ${pokemon.name}.`
 
                     div.appendChild(image)
@@ -200,6 +213,8 @@ form.addEventListener('submit', function (refresh){
                             const image = document.createElement('img')
                             const pokeId = document.createElement('p')
                             const type = document.createElement('h5')
+                            const anchor = document.createElement('a')
+                            anchor.setAttribute("href",`https://www.pokemon.com/us/pokedex/${pokemon.name}`) 
     
     
                             if (pokemon.image == null) {
@@ -216,8 +231,11 @@ form.addEventListener('submit', function (refresh){
                             ul.appendChild(li)
                             li.appendChild(image)
                             li.appendChild(pokeId)
-                            li.appendChild(title)
+                            li.appendChild(anchor)
+                            anchor.appendChild(title)
+                            // li.appendChild(title)
                             li.appendChild(type)
+                            
     
                         }
     

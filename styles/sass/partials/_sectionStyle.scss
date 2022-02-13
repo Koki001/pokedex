@@ -196,7 +196,7 @@ button {
 }
 
 .pokeUlWrapper {
-    min-height: 600px;
+    min-height: 200px;
 }
 
 fieldset {
@@ -279,4 +279,12 @@ input[name="poke"]:checked + label {
     100% {
         transform: translateY(0);
     }
+}
+
+.browseSub{
+       
+            padding: 55px 5px;
+            background-color: $peach;
+            border-radius: 20px;
+            box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
 }
