@@ -9,78 +9,93 @@
 </head>
 <body>
 
-<h1>PokeDex</h1>
-
-<div class="wrapper aboutContainer">
-    <div class="aboutImgContainer">
-        <img class="ash" src="./assets/ashPokemon.png" alt="">
-        <img class="pikachu" src="./assets/pikachu.png" alt="">
-    </div>
-    <div class="aboutTextContainer">
-        <h2>What are Pokemon</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam quisquam similique, id quae explicabo enim sequi, laborum repellat maxime tempore facere qui dignissimos corrupti voluptate, et deleniti voluptatum ducimus consectetur reprehenderit praesentium corporis rem ipsa. Asperiores animi beatae porro earum?</p>
-    </div>
-</div>
-<div class="wrapper meetWrapper">
-    <h2>Meet a pokemon</h2>
-    <div class="meetContainer">
-        <div class="meetImgContainer">
-            <div class="singlePokemonContainer">
-
+<main>
+    <h1>PokeDex</h1>
+    
+    <section class="aboutSection">
+        <div class="wrapper aboutContainer">
+            <div class="aboutImgContainer">
+                <img class="ash" src="./assets/ashPokemon.png" alt="">
+                <img class="pikachu" src="./assets/pikachu.png" alt="">
             </div>
-            <button type="submit" class="singlePokemonButton"></button>
+            <div class="aboutTextContainer">
+                <h2>What are Pokemon</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam quisquam similique, id quae explicabo enim sequi, laborum repellat maxime tempore facere qui dignissimos corrupti voluptate, et deleniti voluptatum ducimus consectetur reprehenderit praesentium corporis rem ipsa. Asperiores animi beatae porro earum?</p>
+            </div>
         </div>
-        <div class="meetTextContainer">
-            <h2 class="greetingTitle"></h2>
-            <p class="pId">ID:</p>
-            <p class="pHp">HP:</p>
-            <p class="pH">Height:</p>
-            <p class="pW">Weight:</p>
-            <p class="pType">Type:</p>
-            <p class="pAttack">Attack:</p>
-            <p class="pDefense">Defense:</p>
+    </section>
+
+    <section class="meetSection">
+        <div class="wrapper meetWrapper">
+            <div class="titleUpContainer">
+                <h2 class="titleUp">Meet a pokemon</h2>
+            </div>
+            <div class="meetContainer">
+                <div class="meetImgContainer">
+                    <div class="singlePokemonContainer">
+        
+                    </div>
+                    <button type="submit" class="singlePokemonButton">Click here for a new Pokemon</button>
+                </div>
+                <div class="meetTextContainer">
+                    <h2 class="greetingTitle"></h2>
+                    <div class="meetInfoContainer">
+                        <p class="pId">ID:</p>
+                        <p class="pHp">HP:</p>
+                        <p class="pH">Height:</p>
+                        <p class="pW">Weight:</p>
+                        <p class="pType">Type:</p>
+                        <p class="pAttack">Attack:</p>
+                        <p class="pDefense">Defense:</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-
-
-
-<div class="wrapper">
-    <h2> Browse PokeDex</h2>
-    <h2>To explore more pokemon please select from one of the options below!</h2>
-    <div class = "browseContainer">
-        <h3> How many would you like to see?</h3>
-    <form action="" class = "pokeForm">
-        <fieldset class="options">
-
-            <input type="radio" name="poke" id="first" value="5"  >
-            <label for="first">5</label>
+    </section>
     
-            <input type="radio" name="poke" id="second" value="10" >
-            <label for="second">10</label>
-    
-            <input type="radio" name="poke" id="third" value="15" >
-            <label for="third">15</label>
-
-        </fieldset>
-        <div class="submitContainer">
-            <input type="submit" value="Get me Pokemon!">
+    <section class="browseSection">
+        <div class="wrapper">
+            <div class="titleUpContainer">
+                <h2 class="titleUp"> Browse PokeDex</h2>
+            </div>
+            <h2>To explore more pokemon please select from one of the options below!</h2>
+            <div class = "browseContainer">
+                <div class="howMany">
+                    <h3> How many would you like to see?</h3>
+                </div>
+            <form action="" class = "pokeForm">
+                <fieldset class="options">
+        
+                    <input type="radio" name="poke" id="first" value="4"  >
+                    <label for="first">4</label>
+        
+                    <input type="radio" name="poke" id="second" value="8" >
+                    <label for="second">8</label>
+        
+                    <input type="radio" name="poke" id="third" value="12" >
+                    <label for="third">12</label>
+        
+                </fieldset>
+                <div class="submitContainer">
+                    <input type="submit" value="Get me Pokemon!" id="manyPoke">
+                </div>
+            </form>
+            </div>
         </div>
-    </form>
-    </div>
-</div>
-<!-- 
-<div class="wrapper"> -->
-    <ul id = "pokeUl" class = "ulContainer randomPokemonUl">
-    
-    </ul>
-<!-- </div> -->
+        
+        <div class="wrapper pokeUlWrapper">
+            <ul id = "pokeUl" class = "ulContainer randomPokemonUl">
+        
+            </ul>
+        </div>
+    </section>
+</main>
 
-<!-- <div class="wrapper">
+
     <footer>
         <h2>Created at Juno</h2>
     </footer>
-</div> -->
+
 
 
         <script src="./script.js"></script>

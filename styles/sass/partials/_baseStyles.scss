@@ -16,18 +16,18 @@ html{
 
 body {
 	background: #bbdcef;
-	background: -webkit-linear-gradient(to right, #D4D3DD, #bbdcef);
 	background: linear-gradient(to right, #D4D3DD, #bbdcef);
 }
 
 p {
     padding: 0;
     margin: 0;
-    
 }
-h3,h5{
+
+h3,h5 {
     text-transform: capitalize;
 }
+
 .wrapper {
     width: 1200px;
     width: 95%;
@@ -40,50 +40,15 @@ ul {
     margin: 0;
 }
 
-input[type="submit"],
-button {
-   
-    height: 40px;
-    width: 100%;
-    border: 3px ;
-    margin: 0px 10px 20px 10px;
-    width: 250px;
-    background-color: $cardColor;
-    border-radius: 20px;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    display:block;
-
-}
-
 input[type="radio"] {
-    display: none;
-
-    
+    visibility: hidden;
+    position: absolute;
 }
 
-.browseContainer{
-    display:flex;
-    justify-content: center;
-}
-
-.options label{
-    background-color: blue;
-   
-    border: 3px ;
-    margin: 0px 10px 20px 10px;
-    
-    background-color: $cardColor;
-    border-radius: 20px;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-    margin: 10px;
-    padding: 5px 20px;
-    text-align: center;
-   
-    
-
-    
+footer {
+    background-color: $cream;
+    h2 {
+        margin-bottom: 0;
+    }
 }
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400&display=swap');
 h1{
      font-family: $kanit;
      font-size: 3rem;
@@ -12,7 +12,9 @@ h2,h3{
 }
 
 
-h5{
+h5,
+button,
+label{
     font-size: 1rem;
     font-weight: 400;
     font-family: $kanit;
@@ -21,10 +23,15 @@ h5{
 p{
     font-family: $kanit;
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 200;
+    
     
 }
 
 .meetTextContainer p{
     font-weight: 400;
+}
+
+.titleUp {
+    font-size: 2rem;
 }
