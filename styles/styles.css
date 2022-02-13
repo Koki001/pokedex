@@ -15,7 +15,7 @@ article, aside, footer, header, nav, section {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: .67em 0;
 }
 
 figcaption, figure, main {
@@ -34,7 +34,7 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace,monospace;
   font-size: 1em;
 }
 
@@ -59,7 +59,7 @@ b, strong {
 }
 
 code, kbd, samp {
-  font-family: monospace, monospace;
+  font-family: monospace,monospace;
   font-size: 1em;
 }
 
@@ -84,11 +84,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 audio, video {
@@ -137,7 +137,7 @@ button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring
 }
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  padding: .35em .75em .625em;
 }
 
 legend {
@@ -207,7 +207,7 @@ template {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: "";
+  content: '';
   clear: both;
   height: 0;
 }
@@ -267,7 +267,7 @@ ul {
   margin: 0;
 }
 
-input[type=radio] {
+input[type="radio"] {
   visibility: hidden;
   position: absolute;
 }
@@ -275,8 +275,18 @@ input[type=radio] {
 footer {
   background-color: #E8E5C2;
 }
+
 footer h2 {
   margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #79CEE0;
 }
 
 h1 {
@@ -340,6 +350,7 @@ h2 {
   min-height: 200px;
   margin-bottom: 50px;
 }
+
 .randomPokemonUl li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -365,18 +376,22 @@ h2 {
   padding: 20px;
   text-align: center;
 }
+
 .randomPokemonUl li:hover {
   -webkit-animation: bounce 0.5s linear;
           animation: bounce 0.5s linear;
 }
+
 .randomPokemonUl li img {
   width: 200px;
   height: 200px;
 }
+
 .randomPokemonUl li p {
   margin: 10px 0px 0 0;
   padding: 0px;
 }
+
 .randomPokemonUl li h3, .randomPokemonUl li h5 {
   margin: 0;
   padding: 0;
@@ -409,6 +424,7 @@ h2 {
   width: 95%;
   height: 415px;
 }
+
 .singlePokemonContainer img {
   width: 380px;
   height: 380px;
@@ -423,6 +439,7 @@ h2 {
           justify-content: center;
   margin-bottom: 120px;
 }
+
 .meetContainer .meetImgContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,6 +456,7 @@ h2 {
           justify-content: center;
   width: 50%;
 }
+
 .meetContainer .meetTextContainer {
   border: 3px;
   margin: 0px 10px 20px 10px;
@@ -450,6 +468,7 @@ h2 {
   padding: 20px;
   width: 35%;
 }
+
 .meetContainer .meetTextContainer h2 {
   text-transform: capitalize;
   text-align: center;
@@ -459,6 +478,7 @@ h2 {
   -webkit-box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
           box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
 }
+
 .meetContainer .meetInfoContainer {
   border-radius: 20px;
   background-color: #E8E5C2;
@@ -467,7 +487,7 @@ h2 {
   padding: 20px;
 }
 
-input[type=submit],
+input[type="submit"],
 button {
   line-height: 0.2rem;
   height: 40px;
@@ -484,21 +504,24 @@ button {
   text-align: center;
   display: block;
 }
-input[type=submit]:hover,
+
+input[type="submit"]:hover,
 button:hover {
   background-color: #FCC499;
   -webkit-box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
           box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   border: 1px solid rgba(100, 100, 100, 0.2);
 }
-input[type=submit]:active,
+
+input[type="submit"]:active,
 button:active {
   background-color: #e9a26c;
   border: 1px solid rgba(100, 100, 100, 0.5);
   -webkit-box-shadow: 0 3px 15px rgba(100, 100, 100, 0.7);
           box-shadow: 0 3px 15px rgba(100, 100, 100, 0.7);
 }
-input[type=submit]:disabled,
+
+input[type="submit"]:disabled,
 button:disabled {
   background-color: #cecaca;
 }
@@ -513,6 +536,7 @@ button:disabled {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
 .aboutContainer .aboutImgContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -522,16 +546,20 @@ button:disabled {
           align-items: flex-end;
   width: 60%;
 }
+
 .aboutContainer .aboutImgContainer img {
   width: 50%;
 }
+
 .aboutContainer .aboutImgContainer .ash {
   margin-left: 60px;
 }
+
 .aboutContainer .aboutImgContainer .pikachu {
   width: 250px;
   height: 250px;
 }
+
 .aboutContainer .aboutTextContainer {
   width: 40%;
   border: 3px;
@@ -543,12 +571,13 @@ button:disabled {
   margin: 10px;
   padding: 20px;
 }
+
 .aboutContainer .aboutTextContainer h2 {
   font-size: 2rem;
 }
 
 .pokeUlWrapper {
-  min-height: 600px;
+  min-height: 200px;
 }
 
 fieldset {
@@ -598,7 +627,7 @@ fieldset {
           justify-content: center;
 }
 
-input[name=poke]:checked + label {
+input[name="poke"]:checked + label {
   background-color: #4ca7b9;
 }
 
@@ -616,6 +645,7 @@ input[name=poke]:checked + label {
   display: -ms-flexbox;
   display: flex;
 }
+
 .options label {
   border: 3px;
   margin: 0px 10px 20px 10px;
@@ -628,6 +658,7 @@ input[name=poke]:checked + label {
   text-align: center;
   width: calc(100% / 3);
 }
+
 .options label:hover {
   background-color: #79CEE0;
 }
@@ -669,12 +700,20 @@ input[name=poke]:checked + label {
             transform: translateY(0);
   }
 }
+
+.browseSub {
+  padding: 55px 5px;
+  background-color: #FCC499;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
+          box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
+}
+
 @media (max-width: 900px) {
   h1 {
     margin-left: 10px;
     margin-right: 10px;
   }
-
   .aboutContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -690,21 +729,19 @@ input[name=poke]:checked + label {
   .aboutContainer .aboutImgContainer {
     margin-top: 40px;
   }
-
   .singlePokemonContainer img {
     width: 300px;
     height: 300px;
   }
-
   .meetTextContainer h2 {
     font-size: 1.2rem;
   }
-
   .aboutContainer .aboutImgContainer .ash {
     width: 350px;
     height: 350px;
   }
 }
+
 @media (max-width: 700px) {
   .aboutContainer .aboutImgContainer {
     -webkit-box-pack: center;
@@ -724,15 +761,12 @@ input[name=poke]:checked + label {
   .aboutContainer .aboutTextContainer {
     width: 100%;
   }
-
   .singlePokemonContainer {
     width: 100%;
   }
-
   .singlePokemonButton {
     width: 100%;
   }
-
   .meetContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -789,7 +823,6 @@ input[name=poke]:checked + label {
   .meetContainer .meetInfoContainer {
     width: 100%;
   }
-
   .browseContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -810,11 +843,11 @@ input[name=poke]:checked + label {
     font-size: 1.3rem;
   }
 }
+
 @media (max-width: 500px) {
   .browseContainer .pokeForm {
     width: 100%;
   }
-
   .singlePokemonContainer img {
     width: 280px;
     height: 280px;
