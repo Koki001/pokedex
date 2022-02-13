@@ -393,6 +393,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 3px;
   margin: 0px 10px 20px 10px;
   width: 250px;
@@ -504,6 +507,9 @@ button:disabled {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 100px;
   margin-bottom: 100px;
 }
@@ -514,9 +520,6 @@ button:disabled {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   width: 60%;
 }
 .aboutContainer .aboutImgContainer img {
@@ -526,8 +529,8 @@ button:disabled {
   margin-left: 60px;
 }
 .aboutContainer .aboutImgContainer .pikachu {
-  max-width: 250px;
-  max-height: 250px;
+  width: 250px;
+  height: 250px;
 }
 .aboutContainer .aboutTextContainer {
   width: 40%;
@@ -564,6 +567,7 @@ fieldset {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 25%;
 }
 
 .browseContainer {
@@ -620,7 +624,7 @@ input[name=poke]:checked + label {
   -webkit-box-shadow: 0 2px 10px rgba(100, 100, 100, 0.5);
           box-shadow: 0 2px 10px rgba(100, 100, 100, 0.5);
   margin: 10px;
-  padding: 5px 40px;
+  padding: 5px 1px;
   text-align: center;
   width: calc(100% / 3);
 }
@@ -663,5 +667,156 @@ input[name=poke]:checked + label {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+@media (max-width: 900px) {
+  h1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .aboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutContainer .aboutTextContainer {
+    width: 90%;
+  }
+  .aboutContainer .aboutImgContainer {
+    margin-top: 40px;
+  }
+
+  .singlePokemonContainer img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .meetTextContainer h2 {
+    font-size: 1.2rem;
+  }
+
+  .aboutContainer .aboutImgContainer .ash {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 700px) {
+  .aboutContainer .aboutImgContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutContainer .aboutImgContainer .ash {
+    display: none;
+  }
+  .aboutContainer .aboutImgContainer .pikachu {
+    width: 300px;
+    height: 300px;
+  }
+  .aboutContainer .aboutTextContainer {
+    width: 100%;
+  }
+
+  .singlePokemonContainer {
+    width: 100%;
+  }
+
+  .singlePokemonButton {
+    width: 100%;
+  }
+
+  .meetContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .meetContainer .meetTextContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .meetContainer .meetImgContainer {
+    width: 100%;
+  }
+  .meetContainer .greetContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #FCC499;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
+            box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
+  }
+  .meetContainer .greetContainer h2 {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .meetContainer .meetInfoContainer {
+    width: 100%;
+  }
+
+  .browseContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .browseContainer .pokeForm {
+    width: 60%;
+  }
+  .browseContainer h2, .browseContainer h3 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 500px) {
+  .browseContainer .pokeForm {
+    width: 100%;
+  }
+
+  .singlePokemonContainer img {
+    width: 280px;
+    height: 280px;
   }
 }

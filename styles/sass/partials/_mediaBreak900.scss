@@ -1,0 +1,47 @@
+@media (max-width: 900px) {
+    
+    h1 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .aboutContainer {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .aboutTextContainer {
+            width: 90%;
+        }
+
+        .aboutImgContainer {
+            margin-top: 40px;
+        }
+    }
+
+    .singlePokemonContainer {
+        
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .meetTextContainer {
+
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+    .aboutContainer {
+
+        .aboutImgContainer {
+
+            .ash {
+                width: 350px;
+                height: 350px;
+            }
+
+
+        }
+    }
+
+}
