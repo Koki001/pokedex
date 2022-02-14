@@ -1,17 +1,16 @@
 const pokedex = {};
+
+const pokeGreeting = ["Hey!", "What's up!", "Hello!", "YO!", "Hi!", "Good Day!", "Greetings!"];
+const randomGreeting = pokeGreeting[Math.floor(Math.random() * pokeGreeting.length)];
+
 pokedex.init = function(){
     pokedex.fetchPokemon()
 }
 console.log(pokedex)
-const pokeGreeting = ["Hey!", "What's up!", "Hello!", "YO!", "Hi!", "Good Day!", "How's it going?", "Greetings!"]
-const randomGreeting = pokeGreeting[Math.floor(Math.random() * pokeGreeting.length)]
 
+// Function that displays detailed Pokemon image + stats on page load
 pokedex.fetchPokemon = function () {
-    // for (let i = 1; i <= 10; i++) {
-    const random = Math.floor(Math.random() * 850 + 1)
-    // create variables for the API to hold:
-    // use URL constructor
-    // fetch data and convert to JSON
+    const random = Math.floor(Math.random() * 898 + 1)
     const url = `https://pokeapi.co/api/v2/pokemon/${random}`
     fetch(url)
         .then(function (result) {
@@ -30,7 +29,6 @@ pokedex.fetchPokemon = function () {
                 hp: newResult.stats[0].base_stat,
                 defense: newResult.stats[2].base_stat,
                 attack: newResult.stats[1].base_stat,
-
             }
             pokedex.displayPokemon = function () {
                 const greetTitle = document.querySelector('.greetingTitle');
@@ -43,13 +41,52 @@ pokedex.fetchPokemon = function () {
                 const pDefense = document.querySelector('.pDefense');
                 const div = document.querySelector('.singlePokemonContainer')
                 const image = document.createElement('img')
-                const weightIcon = `<i class="fa-solid fa-weight-hanging"></i>`
-                const heightIcon = '<i class="fa-solid fa-up-down"></i>'
-                const idIcon = '<i class="fa-solid fa-hashtag"></i>'
-                const hpIcon = '<i class="fa-solid fa-heart"></i>'
-                const attackIcon = '<i class="fa-solid fa-gavel"></i>'
-                const defenseIcon = '<i class="fa-solid fa-shield-blank"></i>'
 
+                let typeIcon = `<img class="iconAll" src="./assets/iconPack/typePlaceholder.png" alt="">`
+                // TYPE ICON IF-ELSE FOR PAGE LOAD
+                if (pokemon.type == "rock") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/rock.png" alt="">`
+                } else if (pokemon.type == "fire") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/fire.png" alt="">`
+                } else if (pokemon.type == "bug") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/bug.png" alt="">`
+                } else if (pokemon.type == "dark") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/dark.png" alt="">`
+                } else if (pokemon.type == "dragon") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/dragon.png" alt="">`
+                } else if (pokemon.type == "fairy") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/fairy.png" alt="">`
+                } else if (pokemon.type == "fighting") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/fighting.png" alt="">`
+                } else if (pokemon.type == "flying") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/flying.png" alt="">`
+                } else if (pokemon.type == "ghost") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/ghost.png" alt="">`
+                } else if (pokemon.type == "grass") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/grass.png" alt="">`
+                } else if (pokemon.type == "ground") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/ground.png" alt="">`
+                } else if (pokemon.type == "ice") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/ice.png" alt="">`
+                } else if (pokemon.type == "electric") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/lightning.png" alt="">`
+                } else if (pokemon.type == "poison") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/poison.png" alt="">`
+                } else if (pokemon.type == "psychic") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/psychic.png" alt="">`
+                } else if (pokemon.type == "steel") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/steel.png" alt="">`
+                } else if (pokemon.type == "water") {
+                    typeIcon = `<img class="iconAll" src="./assets/iconPack/water.png" alt="">`
+                }
+
+                const weightIcon = `<img class="iconAll" src="./assets/iconPack/weight.png" alt="">`
+                const heightIcon = `<img class="iconAll" src="./assets/iconPack/height.png" alt="">`
+                const idIcon = `<img class="iconAll" src="./assets/iconPack/id.png" alt="">`
+                const hpIcon = `<img class="iconAll" src="./assets/iconPack/hp.png" alt="">`
+                const attackIcon = `<img class="iconAll" src="./assets/iconPack/attack.png" alt="">`
+                const defenseIcon = `<img class="iconAll" src="./assets/iconPack/defense.png" alt="">`
+                
 
                 if (pokemon.image == null) {
                     image.src = pokemon.imageThree
@@ -61,35 +98,35 @@ pokedex.fetchPokemon = function () {
                 pId.innerHTML = `ID: ${idIcon} ${pokemon.id}`
                 pHeight.innerHTML = `Height: ${heightIcon} ${pokemon.height / 10}m`
                 pWeight.innerHTML = `Weight: ${weightIcon} ${pokemon.weight / 10}kg`
-                pType.innerHTML = `Type: ${pokemon.type}`
+                pType.innerHTML = `Type: ${typeIcon} ${pokemon.type}`
                 pHp.innerHTML = `HP: ${hpIcon} ${pokemon.hp}`
                 pAttack.innerHTML = `Attack: ${attackIcon} ${pokemon.attack}`
                 pDefense.innerHTML = `Defense: ${defenseIcon} ${pokemon.defense}`
                 greetTitle.innerHTML = `${randomGreeting} I'm ${pokemon.name}.`
                 div.appendChild(image)
             }
-
             pokedex.displayPokemon()
             console.log(newResult)
         })
-    // }
 }
 
-// create a method to request info from the API
+// ON-CLICK section that displays detailed Pokemon image + stats
 const singleButton = document.querySelector('.singlePokemonButton')
 singleButton.addEventListener('click', function (refresh) {
-
 refresh.preventDefault()
+    // clear() empties the contents of the div so that they can be re-populated on button click
     function clear() {
         document.querySelector('.singlePokemonContainer').innerHTML = "";
     }
     clear()
+    // disableTimer() disables the button for a duration to avoid rapid clicks/calls to the API
+    function disableTimer() {
+       singleButton.disabled = true;
+        setTimeout(function () {singleButton.disabled = false; }, 1000);
+    } disableTimer()
+    
     pokedex.fetchPokemon = function () {
-    // for (let i = 1; i <= 10; i++) {
-        const random = Math.floor(Math.random() * 850 + 1)
-        // create variables for the API to hold:
-        // use URL constructor
-        // fetch data and convert to JSON
+        const random = Math.floor(Math.random() * 898 + 1)
         const url = `https://pokeapi.co/api/v2/pokemon/${random}`
         fetch(url)
             .then(function (result) {
@@ -108,9 +145,8 @@ refresh.preventDefault()
                     hp: newResult.stats[0].base_stat,
                     defense: newResult.stats[2].base_stat,
                     attack: newResult.stats[1].base_stat,
-
                 }
-                const randomGreeting = pokeGreeting[Math.floor(Math.random() * pokeGreeting.length)]
+                const randomGreeting = pokeGreeting[Math.floor(Math.random() * pokeGreeting.length)];
                 pokedex.displayPokemon = function() {
                     const div = document.querySelector('.singlePokemonContainer')
                     const image = document.createElement('img')
@@ -122,13 +158,24 @@ refresh.preventDefault()
                     const pHp = document.querySelector('.pHp');
                     const pAttack = document.querySelector('.pAttack');
                     const pDefense = document.querySelector('.pDefense');
+
                     image.classList.add("fadeImg")
-                    const weightIcon = `<i class="fa-solid fa-weight-hanging"></i>`
-                    const heightIcon = '<i class="fa-solid fa-up-down"></i>'
-                    const idIcon = '<i class="fa-solid fa-hashtag"></i>'
-                    const hpIcon = '<i class="fa-solid fa-heart"></i>'
-                    const attackIcon = '<i class="fa-solid fa-gavel"></i>'
-                    const defenseIcon = '<i class="fa-solid fa-shield-blank"></i>'
+
+                    // FONT AWESOME ICON BACKUP
+                    // const weightIcon = `<i class="fa-solid fa-weight-hanging"></i>`
+                    // const heightIcon = '<i class="fa-solid fa-up-down"></i>'
+                    // const idIcon = '<i class="fa-solid fa-hashtag"></i>'
+                    // const hpIcon = '<i class="fa-solid fa-heart"></i>'
+                    // const attackIcon = '<i class="fa-solid fa-gavel"></i>'
+                    // const defenseIcon = '<i class="fa-solid fa-shield-blank"></i>'
+
+                    const weightIcon = `<img class="iconAll" src="./assets/iconPack/weight.png" alt="">`
+                    const heightIcon = `<img class="iconAll" src="./assets/iconPack/height.png" alt="">`
+                    const idIcon = `<img class="iconAll" src="./assets/iconPack/id.png" alt="">`
+                    const hpIcon = `<img class="iconAll" src="./assets/iconPack/hp.png" alt="">`
+                    const attackIcon = `<img class="iconAll" src="./assets/iconPack/attack.png" alt="">`
+                    const defenseIcon = `<img class="iconAll" src="./assets/iconPack/defense.png" alt="">`
+                    let typeIcon = `<img class="iconAll" src="./assets/iconPack/typePlaceholder.png" alt="">`
 
                     if (pokemon.image == null) {
                         image.src = pokemon.imageThree
@@ -137,59 +184,83 @@ refresh.preventDefault()
                     } else {
                         image.src = pokemon.image
                     }
-                    
-                    
+                    // TYPE ICON IF-ELSE FOR BUTTON
+                    if (pokemon.type == "rock") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/rock.png" alt="">`
+                    } else if (pokemon.type == "fire") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/fire.png" alt="">`
+                    } else if (pokemon.type == "bug") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/bug.png" alt="">`
+                    } else if (pokemon.type == "dark") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/dark.png" alt="">`
+                    } else if (pokemon.type == "dragon") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/dragon.png" alt="">`
+                    } else if (pokemon.type == "fairy") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/fairy.png" alt="">`
+                    } else if (pokemon.type == "fighting") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/fighting.png" alt="">`
+                    } else if (pokemon.type == "flying") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/flying.png" alt="">`
+                    } else if (pokemon.type == "ghost") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/ghost.png" alt="">`
+                    } else if (pokemon.type == "grass") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/grass.png" alt="">`
+                    } else if (pokemon.type == "ground") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/ground.png" alt="">`
+                    } else if (pokemon.type == "ice") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/ice.png" alt="">`
+                    } else if (pokemon.type == "lightning") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/lightning.png" alt="">`
+                    } else if (pokemon.type == "poison") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/poison.png" alt="">`
+                    } else if (pokemon.type == "psychic") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/psychic.png" alt="">`
+                    } else if (pokemon.type == "steel") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/steel.png" alt="">`
+                    } else if (pokemon.type == "water") {
+                        typeIcon = `<img class="iconAll" src="./assets/iconPack/water.png" alt="">`
+                    }
+
                     pId.innerHTML = `ID: ${idIcon} ${pokemon.id}`
                     pHeight.innerHTML = `Height: ${heightIcon} ${pokemon.height / 10}m`
                     pWeight.innerHTML = `Weight: ${weightIcon} ${pokemon.weight / 10}kg`
-                    pType.innerHTML = `Type: ${pokemon.type}`
+                    pType.innerHTML = `Type: ${typeIcon} ${pokemon.type}`
                     pHp.innerHTML = `HP: ${hpIcon} ${pokemon.hp}`
                     pAttack.innerHTML = `Attack: ${attackIcon} ${pokemon.attack}`
                     pDefense.innerHTML = `Defense: ${defenseIcon} ${pokemon.defense}`
                     greetTitle.innerHTML = `${randomGreeting} I'm ${pokemon.name}.`
 
                     div.appendChild(image)
-
                 }
-
                 pokedex.displayPokemon()
                 console.log(newResult)
             })
-
-    // }
     }
     pokedex.fetchPokemon()
 })
 
-// const checkSubmit = function () {
-//     //If the checkbox has been checked
-//     if (document.getElementById("manyPoke").checked) {
-//         //Set the disabled property to FALSE and enable the button.
-//         document.getElementById("manyPoke").disabled = false;
-//     } else {
-//         document.getElementById("manyPoke").disabled = true;
-//     }
-// }
-
+// ON-CLICK section that displays Pokemon gallery
 const form = document.querySelector('form')
 form.addEventListener('submit', function (refresh){
-    
     refresh.preventDefault()
     
     function clear() {
         document.querySelector('ul').innerHTML = "";
     }
     clear()
-
+    // if (inputCheckState) makes sure a radio button input is selected before function runs // alert() instead
     let inputCheckState = document.querySelector('input[name = "poke"]')
     if (inputCheckState = document.querySelector('input[name = "poke"]:checked')) {
         const input = document.querySelector('input[name = "poke"]:checked').value
+        
+        function disableTimer() {
+            document.getElementById("manyPoke").disabled = true;
+            setTimeout(function () { document.getElementById("manyPoke").disabled = false; }, 1500);
+        } disableTimer()
+
         pokedex.fetchPokemon = function () {
             for (let i = 1; i <= input; i++) {
-                const random = Math.floor(Math.random() * 850 + 1)
-                // create variables for the API to hold:
-                // use URL constructor
-                // fetch data and convert to JSON
+                const random = Math.floor(Math.random() * 898 + 1)
                 const url = `https://pokeapi.co/api/v2/pokemon/${random}`
                 fetch(url)
                     .then(function (result) {
@@ -205,7 +276,6 @@ form.addEventListener('submit', function (refresh){
                             // typeTwo: newResult.types[1].type.name,
                             id: newResult.id,
                         }
-                        
                         pokedex.displayPokemon = function () {
                             const ul = document.querySelector('ul')
                             const li = document.createElement('li')
@@ -216,7 +286,8 @@ form.addEventListener('submit', function (refresh){
                             const anchor = document.createElement('a')
                             anchor.setAttribute("href",`https://www.pokemon.com/us/pokedex/${pokemon.name}`) 
     
-    
+                            let typeIcon = `<img class="iconAll" src="./assets/iconPack/typePlaceholder.png" alt="">`
+
                             if (pokemon.image == null) {
                                 image.src = pokemon.imageThree
                             } else if (pokemon.imageThree == null) {
@@ -224,21 +295,72 @@ form.addEventListener('submit', function (refresh){
                             } else {
                                 image.src = pokemon.image
                             }
-    
+
+                            if (pokemon.type == "rock") {
+                                type.classList.add("rockColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/rock.png" alt="">`
+                            } else if (pokemon.type == "fire") {
+                                type.classList.add("fireColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/fire.png" alt="">`
+                            } else if (pokemon.type == "bug") {
+                                type.classList.add("bugColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/bug.png" alt="">`
+                            } else if (pokemon.type == "dark") {
+                                type.classList.add("darkColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/dark.png" alt="">`
+                            } else if (pokemon.type == "dragon") {
+                                type.classList.add("dragonColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/dragon.png" alt="">`
+                            } else if (pokemon.type == "fairy") {
+                                type.classList.add("fairyColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/fairy.png" alt="">`
+                            } else if (pokemon.type == "fighting") {
+                                type.classList.add("fightingColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/fighting.png" alt="">`
+                            } else if (pokemon.type == "flying") {
+                                type.classList.add("flyingColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/flying.png" alt="">`
+                            } else if (pokemon.type == "ghost") {
+                                type.classList.add("ghostColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/ghost.png" alt="">`
+                            } else if (pokemon.type == "grass") {
+                                type.classList.add("grassColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/grass.png" alt="">`
+                            } else if (pokemon.type == "ground") {
+                                type.classList.add("groundColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/ground.png" alt="">`
+                            } else if (pokemon.type == "ice") {
+                                type.classList.add("iceColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/ice.png" alt="">`
+                            } else if (pokemon.type == "electric") {
+                                type.classList.add("lightningColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/lightning.png" alt="">`
+                            } else if (pokemon.type == "poison") {
+                                type.classList.add("poisonColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/poison.png" alt="">`
+                            } else if (pokemon.type == "psychic") {
+                                type.classList.add("psychicColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/psychic.png" alt="">`
+                            } else if (pokemon.type == "steel") {
+                                type.classList.add("steelColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/steel.png" alt="">`
+                            } else if (pokemon.type == "water") {
+                                type.classList.add("waterColor")
+                                typeIcon = `<img class="iconAll" src="./assets/iconPack/water.png" alt="">`
+                            } else if (pokemon.type == "normal"){
+                                type.classList.add("normalColor")
+                            }
+
                             title.innerHTML = pokemon.name
                             pokeId.innerHTML =`#${pokemon.id}`
-                            type.innerHTML = pokemon.type
+                            type.innerHTML = `${typeIcon} ${pokemon.type}`
                             ul.appendChild(li)
                             li.appendChild(image)
                             li.appendChild(pokeId)
                             li.appendChild(anchor)
                             anchor.appendChild(title)
-                            // li.appendChild(title)
                             li.appendChild(type)
-                            
-    
                         }
-    
                         pokedex.displayPokemon()
                         const scrollPoint = document.querySelector(".browseContainer")
                         scrollPoint.scrollIntoView({
@@ -253,7 +375,5 @@ form.addEventListener('submit', function (refresh){
     } else {
         alert("Please select one of the values above the button before searching! Your options are labelled '4', '8', and '12'.")
     }
-
 }) 
-
 pokedex.init()

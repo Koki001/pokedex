@@ -1,14 +1,15 @@
 @media (max-width: 500px) {
 
-    .browseContainer {
+    h1 {
+        font-size: 2.6rem;
+    }
 
+    .browseContainer {
         .pokeForm {
         width: 100%;
      }
     }
-
     .singlePokemonContainer {
-
         img {
             width: 280px;
             height: 280px;

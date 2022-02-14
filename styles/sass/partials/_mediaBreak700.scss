@@ -1,33 +1,33 @@
 @media (max-width: 700px) {
 
-    .aboutContainer {
+    .pokemonTitle {
+    width: 100%;
+    padding: 40px 40px 0 40px;
+    }
 
+    .aboutContainer {
         .aboutImgContainer {
             justify-content: center;
             align-items: center;
-
-            .ash {
-                display: none;
-            }
-
-            .pikachu {
-                width: 300px;
-                height: 300px;
-            }
-
         }
-
         .aboutTextContainer {
             width: 100%;
         }
+    }
 
+    .aboutContainerTwo {
+        .aboutImgContainerTwo {
+            justify-content: center;
+            align-items: center;
+        }
+        .aboutTextContainerTwo {
+            width: 100%;
+        }
     }
 
     .singlePokemonContainer {
         width: 100%;
-
     }
-    
     .singlePokemonButton {
         width: 100%;
     }
@@ -43,11 +43,9 @@
             align-items: center;
             width: 100%;
         }
-
         .meetImgContainer {
             width: 100%;
         }
-    
         .greetContainer {
             display: flex;
             align-items: center;
@@ -66,11 +64,15 @@
                 box-shadow: none;
             }
         }
-    
         .meetInfoContainer {
             width: 100%;
+            text-align: center;
         }
-        
+    }
+
+    .howMany {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .browseContainer {
@@ -82,7 +84,6 @@
         .pokeForm {
             width: 60%;
         }
-
         h2, h3 {
             font-size: 1.3rem;
         }

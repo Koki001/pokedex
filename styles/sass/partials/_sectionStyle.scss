@@ -1,58 +1,138 @@
+.pokemonTitle {
+    width: 100%;
+    padding: 40px 100px 0 100px;
+}
+
 h1 {
     text-align: center;
+    margin: 0 auto;
     padding: 5px 5px;
-    background-color: $orange;
+    background-color: $pokeBlue;
+    color: white;
     border-radius: 20px;
     box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
-    margin-left: 200px;
-    margin-right: 200px;
+    width: 100%;
 }
 
 h2 {
     text-align: center;
 }
 
-.randomPokemonUl{
+// ABOUT SECTION STYLES START
 
-    display:flex;
+.aboutContainer {
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    min-height: 200px;
-    margin-bottom: 50px;
-
-    li{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
+    align-items: center;
+    margin-top: 150px;
+    
+    .aboutImgContainer {
+        display: flex;
+        align-items: flex-end;
+        width: 50%;
         justify-content: center;
+
+        img {
+            width: 100%;
+            padding: 30px;
+        }
+    }
+
+    .aboutTextContainer {
+        width: 50%;
+        height: 100%;
         border: 3px ;
         margin: 0px 10px 20px 10px;
-        width: 250px;
         background-color: $cardColor;
         border-radius: 20px;
         box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
         margin: 10px;
         padding: 20px;
-        text-align: center;
-        
-        &:hover {
-            animation: bounce 0.5s linear;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-        img{
-            width: 200px;
-            height: 200px;
+        h2 {
+            font-size: 2rem;
+            background-color: $pokeGreetTop;
+            box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+
         }
-        p{
-            margin: 10px 0px 0 0;
-            padding:0px;
-        }
-        h3,h5{
-            margin:0;
-            padding:0;
+        p {
+            padding: 0 10px;
+            background-color: yellow;
+            border-radius: 20px;
+            background-color: $pokeGreetBottom;
+            box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+            padding: 20px;
         }
     }
 }
+
+
+
+.aboutContainerTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 150px;
+
+    .aboutTextContainerTwo {
+    width: 50%;
+    height: 100%;
+    border: 3px ;
+    margin: 0px 10px 20px 10px;
+    background-color: $cardColor;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            background-color: $pokeGreetTop;
+            box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+            padding: 20px;
+            border-radius: 20px;
+            width: 100%;
+        }
+        p {
+            padding: 0 10px;
+            background-color: yellow;
+            border-radius: 20px;
+            background-color: $pokeGreetBottom;
+            box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+            padding: 20px;
+        }
+       
+    }
+
+    .aboutImgContainerTwo {
+        display: flex;
+        align-items: flex-end;
+        width: 50%;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            padding: 30px;
+        }
+    }
+}
+
+// ABOUT SECTION STYLES END
+// MEET SECTION STYLES START
 
 .singlePokemonContainer {
     display:flex;
@@ -71,7 +151,6 @@ h2 {
     width: 95%;
     height: 415px;
     
-
     img {
         width: 380px;
         height: 380px;
@@ -100,25 +179,38 @@ h2 {
         margin: 10px;
         padding: 20px;
         width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
 
         h2{
             text-transform: capitalize;
             text-align: center;
-            padding: 55px 5px;
-            background-color: $peach;
-            border-radius: 20px;
-            box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
         }
     }
-    .meetInfoContainer {
+    
+    .greetContainer {
+        height: 40%;
         border-radius: 20px;
-        background-color: $cream;
+        background-color: $pokeGreetTop;
         box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
         padding: 20px;
-
-  
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+    .meetInfoContainer {
+        border-radius: 20px;
+        background-color: $pokeGreetBottom;
+        box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+        padding: 20px;
+        height: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
 input[type="submit"],
@@ -138,65 +230,25 @@ button {
     display:block;
 
     &:hover {
-        background-color: $peach;
+        background-color: $pokeRed;
         box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
         border: 1px solid rgba(100, 100, 100, 0.2);
     }
-
     &:active {
-        background-color: $peachDark;
+        background-color: $pokeDRed;
         border: 1px solid rgba(100, 100, 100, 0.5);
         box-shadow: 0 3px 15px rgba(100, 100, 100, 0.7);
     }
-
     &:disabled {
         background-color: rgb(206, 202, 202);
     }
-
 }
 
-
-.aboutContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-
-    .aboutImgContainer {
-        display: flex;
-        align-items: flex-end;
-        width: 60%;
-        img {
-            width: 50%;
-        }
-        .ash {
-            margin-left: 60px;
-        }
-        .pikachu {
-            width: 250px;
-            height: 250px;
-        }
-    }
-
-    .aboutTextContainer {
-        width: 40%;
-        border: 3px ;
-        margin: 0px 10px 20px 10px;
-        background-color: $cardColor;
-        border-radius: 20px;
-        box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-        margin: 10px;
-        padding: 20px;
-
-        h2 {
-            font-size: 2rem;
-        }
-       
-    }
-}
+// MEET SECTION STYLES END
+// BROWSE SECTION STYLES START
 
 .pokeUlWrapper {
-    min-height: 200px;
+    min-height: 550px;
 }
 
 fieldset {
@@ -206,7 +258,6 @@ fieldset {
 }
 
 .pokeForm {
-
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -217,17 +268,19 @@ fieldset {
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 20px;
-    background-color: $cream;
+    background-color: $pokeGreetBottom;
     box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
     padding: 20px;
 }
 
 .titleUp {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     border-radius: 20px;
-    background-color: $orange;
+    background-color: $pokeBlue;
     box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
     padding: 10px 50px;
+    width: 100%;
+    color: white;
 }
 
 .titleUpContainer {
@@ -236,15 +289,237 @@ fieldset {
 }
 
 input[name="poke"]:checked + label {
-    background-color: $darkerBlue;
+    background-color: $pokeDRed;
 }
+
 .browseContainer{
     display:flex;
     justify-content: space-evenly;
 }
 
-.options {
+.browseSub{
+    padding: 55px 5px;
+    background-color: $pokeGreetTop;
+    border-radius: 20px;
+    box-shadow: 0 2px 14px rgb(89, 85, 85);
+    margin: 0 auto;
+    padding: 10px 5px;
+    width: 60%;
+}
 
+.randomPokemonUl {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 200px;
+    margin-bottom: 50px;
+
+    li {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 3px ;
+        margin: 0px 10px 20px 10px;
+        width: 250px;
+        background-color: $cardColor;
+        border-radius: 20px;
+        box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+        
+        &:hover {
+            animation: bounce 0.4s linear;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        .iconAll {
+        height: 25px;
+        width: 25px;
+        position: relative;
+        top: 6px;
+        }
+        p {
+            margin: 10px 0px 0 0;
+            padding:0px;
+        }
+        h3,h5 {
+            margin:0;
+            padding:0;
+        }
+        .iconAll {
+            position: relative;
+            top: 0px;
+        }
+        .rockColor {
+            display: flex;
+            background-color: rgb(119, 126, 128);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .fireColor {
+            display: flex;
+            background-color: rgb(224, 108, 31);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .bugColor {
+            display: flex;
+            background-color: rgb(158, 224, 149);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .darkColor {
+            display: flex;
+            background-color: rgb(112, 78, 101);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .dragonColor {
+            display: flex;
+            background-color: rgba(236, 0, 0, 0.815);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .fairyColor {
+            display: flex;
+            background-color: rgb(255, 94, 182);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .fightingColor {
+            display: flex;
+            background-color: rgb(228, 217, 117);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .flyingColor {
+            display: flex;
+            background-color: rgb(182, 231, 223);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .ghostColor {
+            display: flex;
+            background-color: rgb(244, 189, 255);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .grassColor {
+            display: flex;
+            background-color: rgb(61, 173, 27);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .groundColor {
+            display: flex;
+            background-color: rgb(218, 148, 69);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .iceColor {
+            display: flex;
+            background-color: rgb(132, 248, 252);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightningColor {
+            display: flex;
+            background-color: rgb(255, 240, 24);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .poisonColor {
+            display: flex;
+            background-color: rgb(101, 255, 41);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .psychicColor {
+            display: flex;
+            background-color: rgb(131, 53, 141);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .steelColor {
+            display: flex;
+            background-color: rgb(110, 104, 104);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .waterColor {
+            display: flex;
+            background-color: rgb(94, 117, 247);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .normalColor {
+            display: flex;
+            background-color: rgb(197, 195, 152);
+            border-radius: 20px;
+            padding: 4px 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.options {
     display: flex;
 
     label {
@@ -259,11 +534,31 @@ input[name="poke"]:checked + label {
         width: calc(100% / 3);
 
         &:hover {
-            background-color: $lightBlue;
+            background-color: $pokeRed;
         }
     }
 }
+a{
+    text-decoration: none;
+    color: black;
 
+    &:hover {
+        color: $pokeDRed;
+
+    }
+}
+
+.howMany {
+    width: 60%;
+
+    h3 {
+        margin-top: 0;
+    }
+}
+
+i {
+    font-size: 0.7rem;
+}
 
 @keyframes bounce {
     20% {
@@ -281,10 +576,17 @@ input[name="poke"]:checked + label {
     }
 }
 
-.browseSub{
-       
-            padding: 55px 5px;
-            background-color: $peach;
-            border-radius: 20px;
-            box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
+.iconAll {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: 6px;
+}
+// BROWSE SECTION STYLES END
+
+footer {
+    background-color: $pokeGreetBottom;
+    h2 {
+        margin-bottom: 0;
+    }
 }
