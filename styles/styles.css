@@ -265,7 +265,7 @@ h3, h5 {
 }
 
 .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   width: 95%;
   margin: 0 auto;
 }
@@ -322,18 +322,38 @@ p {
 
 h1 {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 5px;
+}
+
+.iconWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px 5px;
   background-color: #3B4CCA;
   color: white;
   border-radius: 20px;
   -webkit-box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
           box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
-  width: 100%;
+}
+.iconWrapper .icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
 }
 
 h2 {
   text-align: center;
+}
+
+.secondP {
+  margin-top: 20px;
 }
 
 .aboutContainer {
@@ -346,7 +366,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 150px;
+  margin-top: 80px;
 }
 .aboutContainer .aboutImgContainer {
   display: -webkit-box;
@@ -420,7 +440,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 50px;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
 }
 .aboutContainerTwo .aboutTextContainerTwo {
   width: 50%;
@@ -522,7 +542,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 120px;
+  margin-top: 40px;
 }
 .meetContainer .meetImgContainer {
   display: -webkit-box;
@@ -601,11 +621,89 @@ h2 {
           justify-content: space-between;
 }
 
-input[type=submit],
-button {
+.searchForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  border-radius: 20px;
+  background-color: #F9F3C5;
+  -webkit-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+          box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+  padding: 20px;
+}
+.searchForm h2 {
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.searchForm fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  background-color: #B1CFE1;
+  -webkit-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+          box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+  padding: 20px;
+}
+.searchForm input {
   line-height: 0.2rem;
   height: 40px;
+  border: 3px;
+  margin: 0px 10px 20px 10px;
+  background-color: #eee;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+          box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+.searchForm input[type=submit] {
+  width: 100%;
+  margin: 10px;
+}
+.searchForm .submitSearchContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+}
+.searchForm input[type=search] {
+  width: 45%;
+}
+
+input[type=submit],
+button {
   width: 95%;
+  line-height: 0.2rem;
+  height: 40px;
   border: 3px;
   margin: 0px 10px 20px 10px;
   background-color: #eee;
@@ -620,7 +718,7 @@ button {
 }
 input[type=submit]:hover,
 button:hover {
-  background-color: #ff9494;
+  background-color: #e99e9e;
   -webkit-box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
           box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   border: 1px solid rgba(100, 100, 100, 0.2);
@@ -657,14 +755,22 @@ fieldset {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 25%;
+  width: 30%;
+  border-radius: 20px;
+  background-color: #F9F3C5;
+  -webkit-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+          box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+  padding: 20px;
+}
+.pokeForm p {
+  text-align: center;
 }
 
 .browseContainer {
   margin-top: 50px;
   margin-bottom: 50px;
   border-radius: 20px;
-  background-color: #F9F3C5;
+  background-color: #eee;
   -webkit-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
           box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
   padding: 20px;
@@ -688,6 +794,9 @@ fieldset {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.titleUpContainer .titleUp {
+  margin-bottom: 0px;
 }
 
 input[name=poke]:checked + label {
@@ -1066,7 +1175,7 @@ input[name=poke]:checked + label {
   width: calc(100% / 3);
 }
 .options label:hover {
-  background-color: #ff9494;
+  background-color: #e99e9e;
 }
 
 a {
@@ -1078,7 +1187,13 @@ a:hover {
 }
 
 .howMany {
-  width: 60%;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #F9F3C5;
+  -webkit-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+          box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+  padding: 20px;
+  margin-right: 20px;
 }
 .howMany h3 {
   margin-top: 0;
@@ -1188,6 +1303,23 @@ footer h2 {
   .meetTextContainer h2 {
     font-size: 1.2rem;
   }
+
+  .searchForm h2 {
+    width: 100%;
+  }
+  .searchForm .searchOptions {
+    width: 100%;
+  }
+  .searchForm input[type=search] {
+    width: 60%;
+  }
+  .searchForm .submitSearchContainer {
+    width: 30%;
+  }
+
+  .browseSub {
+    width: 80%;
+  }
 }
 @media (max-width: 700px) {
   .pokemonTitle {
@@ -1267,7 +1399,7 @@ footer h2 {
             justify-content: center;
     width: 100%;
     margin-bottom: 20px;
-    background-color: #FCC499;
+    background-color: #B1CFE1;
     border-radius: 20px;
     -webkit-box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
             box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
@@ -1288,6 +1420,7 @@ footer h2 {
   .howMany {
     width: 100%;
     margin-bottom: 20px;
+    margin-right: 0px;
   }
 
   .browseContainer {
@@ -1309,6 +1442,10 @@ footer h2 {
   .browseContainer h2, .browseContainer h3 {
     font-size: 1.3rem;
   }
+
+  .browseSub {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   h1 {
@@ -1322,5 +1459,18 @@ footer h2 {
   .singlePokemonContainer img {
     width: 280px;
     height: 280px;
+  }
+
+  .searchForm .searchOptions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .searchForm input[type=search] {
+    width: 100%;
+  }
+  .searchForm .submitSearchContainer {
+    width: 50%;
   }
 }

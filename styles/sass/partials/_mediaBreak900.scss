@@ -47,4 +47,28 @@
             font-size: 1.2rem;
         }
     }
+
+    .searchForm {
+
+        h2 {
+            width: 100%;
+        }
+
+        .searchOptions {
+            width: 100%;
+        }
+
+        input[type="search"] {
+            width: 60%;
+        }
+
+        .submitSearchContainer {
+            width: 30%;
+        }
+
+    }
+
+    .browseSub {
+        width: 80%;
+    }
 }

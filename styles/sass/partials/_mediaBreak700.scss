@@ -52,7 +52,7 @@
             justify-content: center;
             width: 100%;
             margin-bottom: 20px;
-            background-color: $peach;
+            background-color: $pokeGreetTop;
             border-radius: 20px;
             box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
 
@@ -73,6 +73,7 @@
     .howMany {
         width: 100%;
         margin-bottom: 20px;
+        margin-right: 0px;
     }
 
     .browseContainer {
@@ -87,6 +88,9 @@
         h2, h3 {
             font-size: 1.3rem;
         }
+    }
+    .browseSub {
+        width: 100%;
     }
 }
 
