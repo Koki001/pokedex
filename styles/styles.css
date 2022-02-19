@@ -533,6 +533,9 @@ h2 {
 .singlePokemonContainer img {
   width: 380px;
   height: 380px;
+  opacity: 0;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
 .meetContainer {
@@ -736,7 +739,7 @@ button:disabled {
 }
 
 .pokeUlWrapper {
-  min-height: 550px;
+  min-height: 200px;
 }
 
 fieldset {
@@ -865,14 +868,20 @@ input[name=poke]:checked + label {
           animation: bounce 0.4s linear;
 }
 .randomPokemonUl li img {
+  opacity: 0;
   width: 200px;
   height: 200px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
 }
 .randomPokemonUl li .iconAll {
   height: 25px;
   width: 25px;
   position: relative;
   top: 6px;
+}
+.randomPokemonUl li h5 img {
+  opacity: 1;
 }
 .randomPokemonUl li p {
   margin: 10px 0px 0 0;
@@ -886,7 +895,7 @@ input[name=poke]:checked + label {
   position: relative;
   top: 0px;
 }
-.randomPokemonUl li .rockColor {
+.randomPokemonUl li .rock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -901,7 +910,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .fireColor {
+.randomPokemonUl li .fire {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -916,7 +925,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .bugColor {
+.randomPokemonUl li .bug {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -931,7 +940,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .darkColor {
+.randomPokemonUl li .dark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -946,7 +955,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .dragonColor {
+.randomPokemonUl li .dragon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -961,7 +970,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .fairyColor {
+.randomPokemonUl li .fairy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -976,7 +985,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .fightingColor {
+.randomPokemonUl li .fighting {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -991,7 +1000,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .flyingColor {
+.randomPokemonUl li .flying {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1006,7 +1015,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .ghostColor {
+.randomPokemonUl li .ghost {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1021,7 +1030,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .grassColor {
+.randomPokemonUl li .grass {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1036,7 +1045,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .groundColor {
+.randomPokemonUl li .ground {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1051,7 +1060,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .iceColor {
+.randomPokemonUl li .ice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1066,7 +1075,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .lightningColor {
+.randomPokemonUl li .electric {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1081,7 +1090,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .poisonColor {
+.randomPokemonUl li .poison {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1096,7 +1105,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .psychicColor {
+.randomPokemonUl li .psychic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1111,7 +1120,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .steelColor {
+.randomPokemonUl li .steel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1126,7 +1135,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .waterColor {
+.randomPokemonUl li .water {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1141,7 +1150,7 @@ input[name=poke]:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
-.randomPokemonUl li .normalColor {
+.randomPokemonUl li .normal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1247,11 +1256,68 @@ i {
   top: 6px;
 }
 
+.linkFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.linkContainer {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #F9F3C5;
+  -webkit-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+          box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+  padding: 20px;
+  margin: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.linkContainer p {
+  text-align: center;
+}
+.linkContainer h3 {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #B1CFE1;
+  -webkit-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+          box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+  padding: 5px;
+  margin: 20px 0;
+  width: 50%;
+}
+.linkContainer span {
+  font-weight: bolder;
+}
+
 footer {
   background-color: #F9F3C5;
 }
 footer h2 {
   margin-bottom: 0;
+}
+footer p {
+  text-align: center;
+}
+footer span {
+  font-weight: bolder;
 }
 
 @media (max-width: 900px) {
@@ -1300,7 +1366,10 @@ footer h2 {
     height: 300px;
   }
 
-  .meetTextContainer h2 {
+  .meetContainer .meetTextContainer {
+    width: 40%;
+  }
+  .meetContainer .meetTextContainer h2 {
     font-size: 1.2rem;
   }
 
@@ -1444,6 +1513,10 @@ footer h2 {
   }
 
   .browseSub {
+    width: 100%;
+  }
+
+  .linkContainer h3 {
     width: 100%;
   }
 }

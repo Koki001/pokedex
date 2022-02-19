@@ -42,10 +42,11 @@
             height: 300px;
         }
     }
-    .meetTextContainer {
+    .meetContainer .meetTextContainer {
         h2 {
             font-size: 1.2rem;
         }
+        width: 40%;
     }
 
     .searchForm {
