@@ -42,9 +42,34 @@
             height: 300px;
         }
     }
-    .meetTextContainer {
+    .meetContainer .meetTextContainer {
         h2 {
             font-size: 1.2rem;
         }
+        width: 40%;
+    }
+
+    .searchForm {
+
+        h2 {
+            width: 100%;
+        }
+
+        .searchOptions {
+            width: 100%;
+        }
+
+        input[type="search"] {
+            width: 60%;
+        }
+
+        .submitSearchContainer {
+            width: 30%;
+        }
+
+    }
+
+    .browseSub {
+        width: 80%;
     }
 }

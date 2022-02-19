@@ -15,4 +15,19 @@
             height: 280px;
         }
     }
+    .searchForm {
+
+        .searchOptions {
+            flex-direction: column;
+        }
+
+        input[type="search"] {
+            width: 100%;
+        }
+
+        .submitSearchContainer {
+            width: 50%;
+        }
+
+    }
 }

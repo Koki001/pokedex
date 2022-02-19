@@ -5,13 +5,24 @@
 
 h1 {
     text-align: center;
-    margin: 0 auto;
+    margin: 0 5px;
+
+}
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5px 5px;
     background-color: $pokeBlue;
     color: white;
     border-radius: 20px;
     box-shadow: 0 3px 5px rgba(100, 100, 100, 0.8);
-    width: 100%;
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+    }
 }
 
 h2 {
@@ -20,11 +31,15 @@ h2 {
 
 // ABOUT SECTION STYLES START
 
+.secondP {
+    margin-top: 20px;
+}
+
 .aboutContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 80px;
     
     .aboutImgContainer {
         display: flex;
@@ -43,7 +58,7 @@ h2 {
         height: 100%;
         border: 3px ;
         margin: 0px 10px 20px 10px;
-        background-color: $cardColor;
+        background-color: #eee;
         border-radius: 20px;
         box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
         margin: 10px;
@@ -81,14 +96,14 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
 
     .aboutTextContainerTwo {
     width: 50%;
     height: 100%;
     border: 3px ;
     margin: 0px 10px 20px 10px;
-    background-color: $cardColor;
+    background-color: #eee;
     border-radius: 20px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
     margin: 10px;
@@ -154,13 +169,15 @@ h2 {
     img {
         width: 380px;
         height: 380px;
+        opacity: 0;
+        transition: all 1s linear;
     }
 }
 
 .meetContainer {
     display: flex;
     justify-content: center;
-    margin-bottom: 120px;
+    margin-top: 40px;
 
     .meetImgContainer{
         display:flex;
@@ -173,7 +190,7 @@ h2 {
     .meetTextContainer {
         border: 3px ;
         margin: 0px 10px 20px 10px;
-        background-color: $cardColor;
+        background-color: #eee;
         border-radius: 20px;
         box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
         margin: 10px;
@@ -213,11 +230,73 @@ h2 {
     }
 }
 
+.searchForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    border-radius: 20px;
+    background-color: $pokeGreetBottom;
+    box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+    padding: 20px;
+
+
+
+    h2 {
+        margin: 0 auto;
+        width: 50%;
+        margin-bottom: 20px;
+        
+    }
+
+        fieldset {
+            display: flex;
+            width: 85%;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background-color: $pokeGreetTop;
+            box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+            padding: 20px;
+
+        }
+        input {
+            line-height: 0.2rem;
+            height: 40px;
+            border: 3px ;
+            margin: 0px 10px 20px 10px;
+            background-color: $cardColor;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+        input[type="submit"] {
+            width: 100%;
+            margin: 10px;
+        }
+
+        .submitSearchContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+        }
+
+        input[type="search"] {
+            width: 45%;
+        }
+}
+
 input[type="submit"],
 button {
+    width: 95%;
     line-height: 0.2rem;
     height: 40px;
-    width: 95%;
     border: 3px ;
     margin: 0px 10px 20px 10px;
     background-color: $cardColor;
@@ -248,7 +327,7 @@ button {
 // BROWSE SECTION STYLES START
 
 .pokeUlWrapper {
-    min-height: 550px;
+    min-height: 200px;
 }
 
 fieldset {
@@ -261,14 +340,22 @@ fieldset {
     display:flex;
     justify-content: center;
     flex-direction: column;
-    width: 25%;
+    width: 30%;
+    border-radius: 20px;
+    background-color: $pokeGreetBottom;
+    box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+    padding: 20px;
+
+    p {
+        text-align: center;
+    }
 }
 
 .browseContainer {
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 20px;
-    background-color: $pokeGreetBottom;
+    background-color: #eee;
     box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
     padding: 20px;
 }
@@ -286,6 +373,10 @@ fieldset {
 .titleUpContainer {
     display: flex;
     justify-content: center;
+
+    .titleUp {
+        margin-bottom: 0px;
+    }
 }
 
 input[name="poke"]:checked + label {
@@ -313,6 +404,7 @@ input[name="poke"]:checked + label {
     flex-wrap: wrap;
     min-height: 200px;
     margin-bottom: 50px;
+    
 
     li {
         display:flex;
@@ -328,19 +420,25 @@ input[name="poke"]:checked + label {
         margin: 10px;
         padding: 20px;
         text-align: center;
+        // animation: fade 0.6s linear;
         
         &:hover {
             animation: bounce 0.4s linear;
         }
         img {
+            opacity: 0;
             width: 200px;
             height: 200px;
+            transition: all 1s linear;
         }
         .iconAll {
         height: 25px;
         width: 25px;
         position: relative;
         top: 6px;
+        }
+        h5 img {
+            opacity: 1;
         }
         p {
             margin: 10px 0px 0 0;
@@ -354,7 +452,7 @@ input[name="poke"]:checked + label {
             position: relative;
             top: 0px;
         }
-        .rockColor {
+        .rock {
             display: flex;
             background-color: rgb(119, 126, 128);
             border-radius: 20px;
@@ -363,7 +461,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .fireColor {
+        .fire {
             display: flex;
             background-color: rgb(224, 108, 31);
             border-radius: 20px;
@@ -372,7 +470,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .bugColor {
+        .bug {
             display: flex;
             background-color: rgb(158, 224, 149);
             border-radius: 20px;
@@ -381,7 +479,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .darkColor {
+        .dark {
             display: flex;
             background-color: rgb(112, 78, 101);
             border-radius: 20px;
@@ -390,7 +488,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .dragonColor {
+        .dragon {
             display: flex;
             background-color: rgba(236, 0, 0, 0.815);
             border-radius: 20px;
@@ -399,7 +497,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .fairyColor {
+        .fairy {
             display: flex;
             background-color: rgb(255, 94, 182);
             border-radius: 20px;
@@ -408,7 +506,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .fightingColor {
+        .fighting {
             display: flex;
             background-color: rgb(228, 217, 117);
             border-radius: 20px;
@@ -417,7 +515,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .flyingColor {
+        .flying {
             display: flex;
             background-color: rgb(182, 231, 223);
             border-radius: 20px;
@@ -426,7 +524,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .ghostColor {
+        .ghost {
             display: flex;
             background-color: rgb(244, 189, 255);
             border-radius: 20px;
@@ -435,7 +533,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .grassColor {
+        .grass {
             display: flex;
             background-color: rgb(61, 173, 27);
             border-radius: 20px;
@@ -444,7 +542,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .groundColor {
+        .ground {
             display: flex;
             background-color: rgb(218, 148, 69);
             border-radius: 20px;
@@ -453,7 +551,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .iceColor {
+        .ice {
             display: flex;
             background-color: rgb(132, 248, 252);
             border-radius: 20px;
@@ -462,7 +560,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .lightningColor {
+        .electric {
             display: flex;
             background-color: rgb(255, 240, 24);
             border-radius: 20px;
@@ -471,7 +569,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .poisonColor {
+        .poison {
             display: flex;
             background-color: rgb(101, 255, 41);
             border-radius: 20px;
@@ -480,7 +578,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .psychicColor {
+        .psychic {
             display: flex;
             background-color: rgb(131, 53, 141);
             border-radius: 20px;
@@ -489,7 +587,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .steelColor {
+        .steel {
             display: flex;
             background-color: rgb(110, 104, 104);
             border-radius: 20px;
@@ -498,7 +596,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .waterColor {
+        .water {
             display: flex;
             background-color: rgb(94, 117, 247);
             border-radius: 20px;
@@ -507,7 +605,7 @@ input[name="poke"]:checked + label {
             justify-content: center;
             align-items: center;
         }
-        .normalColor {
+        .normal {
             display: flex;
             background-color: rgb(197, 195, 152);
             border-radius: 20px;
@@ -549,7 +647,12 @@ a{
 }
 
 .howMany {
-    width: 60%;
+    width: 70%;
+    border-radius: 20px;
+    background-color: $pokeGreetBottom;
+    box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+    padding: 20px;
+    margin-right: 20px;
 
     h3 {
         margin-top: 0;
@@ -576,6 +679,16 @@ i {
     }
 }
 
+// @keyframes fade {
+//     0% {
+//         opacity: 0;
+//     }
+
+//     100% {
+//         opacity: 1;
+//     }
+// }
+
 .iconAll {
     height: 25px;
     width: 25px;
@@ -584,9 +697,48 @@ i {
 }
 // BROWSE SECTION STYLES END
 
+.linkFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkContainer {
+    width: 100%;
+    border-radius: 20px;
+    background-color: $pokeGreetBottom;
+    box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+    padding: 20px;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        p {
+            text-align: center;
+        }
+        h3 {
+            text-align: center;
+            border-radius: 20px;
+            background-color: $pokeGreetTop;
+            box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+            padding: 5px;
+            margin: 20px 0;
+            width: 50%;
+        }
+        span {
+            font-weight: bolder;
+        }
+}
+
 footer {
     background-color: $pokeGreetBottom;
     h2 {
         margin-bottom: 0;
+    }
+    p {
+        text-align: center;
+    }
+    span {
+        font-weight: bolder;
     }
 }
