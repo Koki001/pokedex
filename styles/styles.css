@@ -1515,13 +1515,10 @@ footer span {
   .browseSub {
     width: 100%;
   }
-<<<<<<< HEAD
 
   .linkContainer h3 {
     width: 100%;
   }
-=======
->>>>>>> 5cf9a4471fe3a5da46dd942a45e01ed3512ec93a
 }
 @media (max-width: 500px) {
   h1 {
