@@ -6,9 +6,8 @@ pokedex.isGallery = false;
 pokedex.clearDisplay = function() {
     document.querySelector('.singlePokemonContainer').innerHTML = "";
 };
-// randomizer for Pokemon greetings
+// array of possible greetings
 const pokeGreeting = ["Hey!", "What's up!", "Hello!", "YO!", "Hi!", "Good Day!", "Greetings!"];
-let randomGreeting = pokeGreeting[Math.floor(Math.random() * pokeGreeting.length)];
 
 // setting Juno link to open in new tab
 footer = document.querySelector(".junoLink")
@@ -49,6 +48,9 @@ pokedex.fetchPokemon = function (id = "") {
                 pokedex.pokemon.hp = newResult.stats[0].base_stat,
                 pokedex.pokemon.defense = newResult.stats[2].base_stat,
                 pokedex.pokemon.attack = newResult.stats[1].base_stat,
+
+                // randomizing greeting array
+                randomGreeting = pokeGreeting[Math.floor(Math.random() * pokeGreeting.length)];
 
                     // pokemon display function
                     pokedex.displayPokemon = function () {
